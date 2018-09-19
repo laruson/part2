@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">tasks</string>
+    <string name="textView_one">this TextView one</string>
+    <string name="textView_two">this TextView two</string>
+    <string name="swap">swap</string>
+    <string name="task1">task1</string>
+    <string name="task2">task2</string>
+</resources>

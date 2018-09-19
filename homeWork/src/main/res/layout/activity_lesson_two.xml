@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="#000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/au"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/VerticalFlags"
+                android:layout_width="match_parent"
+                android:background="@color/red" />
+
+            <TextView
+                style="@style/VerticalFlags"
+                android:layout_width="match_parent"
+                android:background="@color/white" />
+
+            <TextView
+                style="@style/VerticalFlags"
+                android:layout_width="match_parent"
+                android:background="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_below="@id/au"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/VerticalFlags"
+                android:layout_width="match_parent"
+                android:background="@color/red" />
+
+            <TextView
+                style="@style/VerticalFlags"
+                android:layout_width="match_parent"
+                android:background="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/it"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_below="@id/pl"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/HorizontalFlags"
+                android:layout_height="match_parent"
+                android:background="@color/green" />
+
+            <TextView
+                style="@style/HorizontalFlags"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <TextView
+                style="@style/HorizontalFlags"
+                android:layout_height="match_parent"
+                android:background="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/co"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_below="@id/it"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/VerticalFlags"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:background="@color/yellow" />
+
+            <TextView
+                style="@style/VerticalFlags"
+                android:layout_width="match_parent"
+                android:background="@color/blue" />
+
+            <TextView
+                style="@style/VerticalFlags"
+                android:layout_width="match_parent"
+                android:background="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_below="@+id/co"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/HorizontalFlags"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/VerticalFlags"
+                    android:layout_width="match_parent"
+                    android:background="@color/red" />
+
+                <TextView
+                    style="@style/VerticalFlags"
+                    android:layout_width="match_parent"
+                    android:background="@color/green" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/th"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_below="@id/mg"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/VerticalFlags"
+                android:layout_width="match_parent"
+                android:background="@color/crimson" />
+
+            <TextView
+                style="@style/VerticalFlags"
+                android:layout_width="match_parent"
+                android:background="@color/white" />
+
+            <TextView
+                style="@style/VerticalFlags"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:background="@color/dark_blue" />
+
+            <TextView
+                style="@style/VerticalFlags"
+                android:layout_width="match_parent"
+                android:background="@color/white" />
+
+            <TextView
+                style="@style/VerticalFlags"
+                android:layout_width="match_parent"
+                android:background="@color/crimson" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dk"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_below="@id/th"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/VerticalFlags"
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:background="@color/red" />
+
+                <TextView
+                    style="@style/VerticalFlags"
+                    android:layout_width="match_parent"
+                    android:background="@color/white" />
+
+                <TextView
+                    style="@style/VerticalFlags"
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:background="@color/red" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/VerticalFlags"
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:background="@color/red" />
+
+                <TextView
+                    style="@style/VerticalFlags"
+                    android:layout_width="match_parent"
+                    android:background="@color/white" />
+
+                <TextView
+                    style="@style/VerticalFlags"
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:background="@color/red" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

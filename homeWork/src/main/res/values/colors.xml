@@ -14,6 +14,8 @@
     <color name="blue">#0634a1</color>
     <color name="crimson">#a51931</color>
     <color name="dark_blue">#2d2a4a</color>
+    <color name="black">#000000</color>
+    <color name="gray">#cecece</color>
 
 
 </resources>

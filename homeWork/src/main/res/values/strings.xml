@@ -5,4 +5,7 @@
     <string name="swap">swap</string>
     <string name="task1">task1</string>
     <string name="task2">task2</string>
+    <string name="picture_url">https://static.mk.ru/upload/entities/2017/12/28/articles/detailPicture/28/35/c2/84/c21033e59c396cc576fc5f48343ebccc.jpg</string>
+    <string name="task3">task3</string>
+    <string name="load">load</string>
 </resources>

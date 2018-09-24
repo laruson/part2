@@ -1,6 +1,7 @@
 package com.chernikovichandreygmail.lesson1;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.support.annotation.RequiresApi;
 import android.view.View;
 import android.widget.TextView;
 
+import com.chernikovichandreygmail.Menu;
 import com.chernikovichandreygmail.R;
 
 @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -18,7 +20,7 @@ public class Swap extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson_one);
+        setContentView(R.layout.activity_swap);
 
         mTextViewOne = findViewById(R.id.textOne);
         mTextViewTwo = findViewById(R.id.textTwo);
@@ -56,5 +58,11 @@ public class Swap extends Activity implements View.OnClickListener {
         Drawable colorView = mTextViewOne.getBackground();
         mTextViewOne.setBackground(mTextViewTwo.getBackground());
         mTextViewTwo.setBackground(colorView);
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, Menu.class));
+        finish();
     }
 }

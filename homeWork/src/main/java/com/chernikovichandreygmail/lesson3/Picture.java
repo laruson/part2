@@ -22,7 +22,7 @@ public class Picture extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_picture);
+        setContentView(R.layout.activity_picture_lesson3);
 
         image = findViewById(R.id.image);
         url = findViewById(R.id.urlPicture);

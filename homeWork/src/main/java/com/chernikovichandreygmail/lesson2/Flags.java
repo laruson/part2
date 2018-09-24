@@ -12,7 +12,7 @@ public class Flags extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_flag);
+        setContentView(R.layout.activity_flag_lesson2);
     }
 
     @Override

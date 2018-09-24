@@ -20,7 +20,7 @@ public class Swap extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_swap);
+        setContentView(R.layout.activity_swap_lesson1);
 
         mTextViewOne = findViewById(R.id.textOne);
         mTextViewTwo = findViewById(R.id.textTwo);

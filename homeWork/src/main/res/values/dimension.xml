@@ -4,4 +4,5 @@
     <dimen name="layout_marginTop">32dp</dimen>
     <dimen name="layout_marginBottom">20dp</dimen>
     <dimen name="corner_radius">40dp</dimen>
+    <dimen name="marginTop">16dp</dimen>
 </resources>

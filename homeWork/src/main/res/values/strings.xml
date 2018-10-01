@@ -8,4 +8,7 @@
     <string name="picture_url">https://static.mk.ru/upload/entities/2017/12/28/articles/detailPicture/28/35/c2/84/c21033e59c396cc576fc5f48343ebccc.jpg</string>
     <string name="task3">task3</string>
     <string name="load">load</string>
+    <string name="owl">Owl</string>
+    <string name="diagram">Diagram</string>
+    <string name="task4">task4</string>
 </resources>

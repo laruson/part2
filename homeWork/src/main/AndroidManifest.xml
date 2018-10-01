@@ -18,15 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".lesson1.Swap">
-
-        </activity>
-        <activity android:name=".lesson2.Flags">
-
-        </activity>
-        <activity android:name=".lesson3.Picture">
-
-        </activity>
+        <activity android:name=".lesson1.Swap" />
+        <activity android:name=".lesson2.Flags" />
+        <activity android:name=".lesson3.Picture" />
+        <activity android:name=".lesson4.Lesson4Main" />
 
     </application>
 

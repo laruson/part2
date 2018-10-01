@@ -9,6 +9,7 @@ import android.view.View;
 import com.chernikovichandreygmail.lesson1.Swap;
 import com.chernikovichandreygmail.lesson2.Flags;
 import com.chernikovichandreygmail.lesson3.Picture;
+import com.chernikovichandreygmail.lesson4.Lesson4Main;
 
 public class Menu extends Activity {
     private Intent intent;
@@ -35,4 +36,12 @@ public class Menu extends Activity {
         startActivity(intent);
         finish();
     }
+
+    public void taskFour(View view) {
+        intent=new Intent(this, Lesson4Main.class);
+        startActivity(intent);
+        finish();
+    }
+
+
 }

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:id="@+id/frame">
+
+    <Button
+        android:id="@+id/buttonOwl"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="owlStart"
+        android:text="@string/owl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDiagram"
+        style="@style/ButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop"
+        android:onClick="diagramStart"
+        android:text="@string/diagram"
+        app:layout_constraintEnd_toEndOf="@+id/buttonOwl"
+        app:layout_constraintStart_toStartOf="@+id/buttonOwl"
+        app:layout_constraintTop_toBottomOf="@+id/buttonOwl" />
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop"
+        app:layout_constraintEnd_toEndOf="@+id/buttonDiagram"
+        app:layout_constraintStart_toStartOf="@+id/buttonDiagram"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDiagram">
+
+        <ImageView
+            android:id="@+id/owlImage"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTop" />
+
+        <com.chernikovichandreygmail.lesson4.Diagram
+            android:id="@+id/diagram"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/marginTop"
+            android:layout_marginTop="@dimen/marginTop" />
+    </FrameLayout>
+
+
+</android.support.constraint.ConstraintLayout>

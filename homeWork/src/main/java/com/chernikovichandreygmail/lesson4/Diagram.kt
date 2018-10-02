@@ -29,7 +29,6 @@ class Diagram : View {
         val sum = sum(data)
         val circle = 360F
         var start = -90F
-        text()
         oval.set(x - radius, y - radius, x - radius + diameter, y - radius + diameter)
         for (i in 0 until data.size) {
             drawArc(canvas, start, circle, sum, data[i], paints[i])
@@ -37,7 +36,7 @@ class Diagram : View {
         }
     }
 
-    private fun drawArc(canvas: Canvas?, start: Float, circul: Float, sum: Int, data: Int, paint: Paint) {
-        canvas?.drawArc(oval, start, circul * data / sum, true, paint)
+    private fun drawArc(canvas: Canvas?, start: Float, circle: Float, sum: Int, data: Int, paint: Paint) {
+        canvas?.drawArc(oval, start, circle * data / sum, true, paint)
     }
 }

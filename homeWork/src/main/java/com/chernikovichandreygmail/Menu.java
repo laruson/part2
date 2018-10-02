@@ -9,10 +9,12 @@ import android.view.View;
 import com.chernikovichandreygmail.lesson1.Swap;
 import com.chernikovichandreygmail.lesson2.Flags;
 import com.chernikovichandreygmail.lesson3.Picture;
-import com.chernikovichandreygmail.lesson4.Lesson4Main;
+import com.chernikovichandreygmail.lesson4.Main;
+import com.chernikovichandreygmail.lesson5.Wifi;
 
 public class Menu extends Activity {
     private Intent intent;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,28 +22,32 @@ public class Menu extends Activity {
     }
 
     public void taskOne(View view) {
-        intent=new Intent(this, Swap.class);
+        intent = new Intent(this, Swap.class);
         startActivity(intent);
         finish();
     }
 
     public void taskTwo(View view) {
-        intent=new Intent(this, Flags.class);
+        intent = new Intent(this, Flags.class);
         startActivity(intent);
         finish();
     }
 
     public void taskThree(View view) {
-        intent=new Intent(this, Picture.class);
+        intent = new Intent(this, Picture.class);
         startActivity(intent);
         finish();
     }
 
     public void taskFour(View view) {
-        intent=new Intent(this, Lesson4Main.class);
+        intent = new Intent(this, Main.class);
         startActivity(intent);
         finish();
     }
 
-
+    public void taskFive(View view) {
+        intent = new Intent(this, Wifi.class);
+        startActivity(intent);
+        finish();
+    }
 }

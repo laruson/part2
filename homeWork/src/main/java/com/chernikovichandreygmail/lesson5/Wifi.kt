@@ -7,13 +7,13 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.net.ConnectivityManager
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import com.chernikovichandreygmail.R
 
 class Wifi : Activity() {
     private lateinit var wifiImage: ImageView
     private lateinit var watch: Watch
-    private lateinit var timer: Timer
 
     private val wifiStatus = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
@@ -29,15 +29,13 @@ class Wifi : Activity() {
         setContentView(R.layout.activity_watch_lesson5)
         wifiImage = findViewById(R.id.wifi)
         watch = findViewById(R.id.watch)
-        timer=Timer(watch!!)
-        timer!!.execute()
+
         registerReceiver(wifiStatus, IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"))
 
     }
 
-    override fun onPause() {
-        super.onPause()
-        timer.cancel(true)
+    override fun onDestroy() {
+        super.onDestroy()
         unregisterReceiver(wifiStatus)
     }
 

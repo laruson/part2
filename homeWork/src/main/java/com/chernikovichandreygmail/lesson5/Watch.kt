@@ -1,11 +1,11 @@
 package com.chernikovichandreygmail.lesson5
 
-import android.annotation.TargetApi
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.os.Build
+import android.os.Handler
 import android.support.annotation.RequiresApi
 import android.util.AttributeSet
 import android.view.View
@@ -27,23 +27,23 @@ class Watch : View {
         isAntiAlias = true
     }
 
+    private val textPaint = Paint().apply {
+        color = Color.BLACK
+        textSize = 70F
+        isAntiAlias = true
+    }
+
     constructor(context: Context?) : super(context)
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) : super(context, attrs, defStyleAttr, defStyleRes)
 
-    fun runWatch() {
-        invalidate()
-    }
-
-
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
         val height = height / 1.7F
         val radius = Math.min(height, width.toFloat()) / 2.toFloat()
-        val diameter = radius * 2
         val x = (width / 2).toFloat()
         val y = height / 2
 
@@ -52,10 +52,12 @@ class Watch : View {
 
         canvas.save()
 
-        val lineStartY = (y + radius) * 0.91F
         var lineFinishY = (y + radius) * 0.81F
+        val lineStartY = (y + radius) * 0.91F
+
         val hourStep = 360 / 12F
         val minuteStep = 360 / 60F
+        val textStep = 360 / 4F
 
         for (i in 1..12) {
             canvas.drawLine(x, lineStartY, x, lineFinishY, blackPaint)
@@ -72,10 +74,17 @@ class Watch : View {
         }
         canvas.restore()
 
+        canvas.drawText("3",x+radius*0.45F,y*1.07F, textPaint)
+        canvas.drawText("6",x*0.96F,y+radius*0.55F, textPaint)
+        canvas.drawText("9",x-radius*0.55F,y*1.07F, textPaint)
+        canvas.drawText("12",x*0.93F,y-radius*0.4F, textPaint)
+
+
         val calendar = Calendar.getInstance()
         val minute = calendar.get(Calendar.MINUTE)
         val hour = calendar.get(Calendar.HOUR)
-        val secund = calendar.get(Calendar.SECOND)
+        val second = calendar.get(Calendar.SECOND)
+
         canvas.save()
         canvas.rotate(hourStep * hour + hourStep / 60 * minute, x, y)
         blackPaint.apply {
@@ -91,7 +100,7 @@ class Watch : View {
         canvas.drawLine(x, y, x, y - radius / 1.8F, blackPaint)
         canvas.restore()
         canvas.save()
-        canvas.rotate(minuteStep * secund, x, y)
+        canvas.rotate(minuteStep * second, x, y)
         blackPaint.apply {
             strokeWidth = 6F
         }
@@ -99,5 +108,13 @@ class Watch : View {
 
         canvas.drawCircle(x, y, 15F, redPaint)
         canvas.restore()
+
+        handler()
+    }
+
+    private fun handler() {
+        Handler().postDelayed({
+            invalidate()
+        }, 1000)
     }
 }

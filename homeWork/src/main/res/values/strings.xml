@@ -12,4 +12,13 @@
     <string name="diagram">Diagram</string>
     <string name="task4">task4</string>
     <string name="task5">task5</string>
+    <string name="task7">task7</string>
+    <string name="title_activity_main_activitya">MainActivitya</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="name">Имя:</string>
+    <string name="surname">Фамилия:</string>
+    <string name="age">Возраст:</string>
+    <string name="photo">Фото:</string>
+    <string name="svave">Svave</string>
 </resources>

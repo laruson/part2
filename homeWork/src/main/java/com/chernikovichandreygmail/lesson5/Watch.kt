@@ -8,6 +8,7 @@ import android.os.Build
 import android.os.Handler
 import android.support.annotation.RequiresApi
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import java.util.*
 
@@ -48,7 +49,7 @@ class Watch : View {
         val y = height / 2
 
         canvas.drawCircle(x, y, radius, blackPaint)
-        canvas.drawCircle(x, y, radius - 50, whitePaint)
+        canvas.drawCircle(x, y, radius * (radius - 50) / radius, whitePaint)
 
         canvas.save()
 
@@ -57,7 +58,6 @@ class Watch : View {
 
         val hourStep = 360 / 12F
         val minuteStep = 360 / 60F
-        val textStep = 360 / 4F
 
         for (i in 1..12) {
             canvas.drawLine(x, lineStartY, x, lineFinishY, blackPaint)
@@ -74,10 +74,10 @@ class Watch : View {
         }
         canvas.restore()
 
-        canvas.drawText("3",x+radius*0.45F,y*1.07F, textPaint)
-        canvas.drawText("6",x*0.96F,y+radius*0.55F, textPaint)
-        canvas.drawText("9",x-radius*0.55F,y*1.07F, textPaint)
-        canvas.drawText("12",x*0.93F,y-radius*0.4F, textPaint)
+        canvas.drawText("3", x + radius * 0.45F, y * 1.07F, textPaint)
+        canvas.drawText("6", x * 0.96F, y + radius * 0.55F, textPaint)
+        canvas.drawText("9", x - radius * 0.55F, y * 1.07F, textPaint)
+        canvas.drawText("12", x * 0.93F, y - radius * 0.4F, textPaint)
 
 
         val calendar = Calendar.getInstance()
@@ -109,12 +109,13 @@ class Watch : View {
         canvas.drawCircle(x, y, 15F, redPaint)
         canvas.restore()
 
+        invalidate()
         handler()
     }
 
     private fun handler() {
         Handler().postDelayed({
-            invalidate()
+
         }, 1000)
     }
 }

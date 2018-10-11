@@ -11,6 +11,7 @@ import com.chernikovichandreygmail.lesson2.Flags;
 import com.chernikovichandreygmail.lesson3.Picture;
 import com.chernikovichandreygmail.lesson4.Main;
 import com.chernikovichandreygmail.lesson5.Wifi;
+import com.chernikovichandreygmail.lesson7.LessonSevenActivityMain;
 
 public class Menu extends Activity {
     private Intent intent;
@@ -47,6 +48,12 @@ public class Menu extends Activity {
 
     public void taskFive(View view) {
         intent = new Intent(this, Wifi.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void taskSeven(View view) {
+        intent = new Intent(this, LessonSevenActivityMain.class);
         startActivity(intent);
         finish();
     }

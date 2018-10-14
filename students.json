@@ -1,57 +1,60 @@
-[
-  {
-    "url": "https://icdn.lenta.ru/images/2017/12/01/11/20171201114634712/pic_26d39046d43e2e1cb558ed1909a8ff68.jpg",
-    "name": "Pes",
-    "surname": "Pesovich",
-    "age": 18
-  },
-  {
-    "url": "https://fakty.ictv.ua/wp-content/uploads/2018/02/07/Sobaka.jpg",
-    "name": "Gav",
-    "surname": "Gavichenko",
-    "age": 27
-  },
-  {
-    "url": "https://www.astromeridian.ru/assets/images/sonnik/sobaka.jpg",
-    "name": "Dog",
-    "surname": "Dogov",
-    "age": 20
-  },
-  {
-    "url": "http://www.nat-geo.ru/upload/iblock/5d9/5d97710b4a2a1154bbf6777cddb492c1.jpg",
-    "name": "Gav",
-    "surname": "Pesov",
-    "age": 21
-  },
-  {
-    "url": "https://memepedia.ru/wp-content/uploads/2018/01/94e-%E2%80%94-%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg",
-    "name": "Volk",
-    "surname": "Auu",
-    "age": 16
-  },
-  {
-    "url": "http://ya2018.com/wp-content/uploads/2017/01/god-sobaki-2018.jpg",
-    "name": "Giena",
-    "surname": "Kek",
-    "age": 23
-  },
-  {
-    "url": "https://zhenskoe-mnenie.ru/upload/information_system_14/2/3/8/item_23815/information_items_23815.jpg",
-    "name": "Gavich",
-    "surname": "Gavchenko",
-    "age": 29
-  },
-  {
-    "url": "http://www.moypesik.ru/images/stories/dog-otr2-0916.jpg",
-    "name": "Au",
-    "surname": "Luti",
-    "age": 18
-  },
-  {
-    "url": "http://prosobak.com/wp-content/uploads/2015/09/13-600x400.jpg",
-    "name": "Sharik",
-    "surname": "Sharikovich",
-    "age": 19
-  }
-]
+{
+  "students ": [
+    {
+      "url": "https://icdn.lenta.ru/images/2017/12/01/11/20171201114634712/pic_26d39046d43e2e1cb558ed1909a8ff68.jpg",
+      "name": "Pes",
+      "surname": "Pesovich",
+      "age": 18
+    },
+    {
+      "url": "https://fakty.ictv.ua/wp-content/uploads/2018/02/07/Sobaka.jpg",
+      "name": "Gav",
+      "surname": "Gavichenko",
+      "age": 27
+    },
+    {
+      "url": "https://www.astromeridian.ru/assets/images/sonnik/sobaka.jpg",
+      "name": "Dog",
+      "surname": "Dogov",
+      "age": 20
+    },
+    {
+      "url": "http://www.nat-geo.ru/upload/iblock/5d9/5d97710b4a2a1154bbf6777cddb492c1.jpg",
+      "name": "Gav",
+      "surname": "Pesov",
+      "age": 21
+    },
+    {
+      "url": "https://memepedia.ru/wp-content/uploads/2018/01/94e-%E2%80%94-%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.jpg",
+      "name": "Volk",
+      "surname": "Auu",
+      "age": 16
+    },
+    {
+      "url": "http://ya2018.com/wp-content/uploads/2017/01/god-sobaki-2018.jpg",
+      "name": "Giena",
+      "surname": "Kek",
+      "age": 23
+    },
+    {
+      "url": "https://zhenskoe-mnenie.ru/upload/information_system_14/2/3/8/item_23815/information_items_23815.jpg",
+      "name": "Gavich",
+      "surname": "Gavchenko",
+      "age": 29
+    },
+    {
+      "url": "http://www.moypesik.ru/images/stories/dog-otr2-0916.jpg",
+      "name": "Au",
+      "surname": "Luti",
+      "age": 18
+    },
+    {
+      "url": "http://prosobak.com/wp-content/uploads/2015/09/13-600x400.jpg",
+      "name": "Sharik",
+      "surname": "Sharikovich",
+      "age": 19
+    }
+  ]
+}
+
 

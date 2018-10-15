@@ -1,7 +1,5 @@
 package com.chernikovichandreygmail.lesson7.fragments
 
-import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -13,10 +11,8 @@ import android.widget.Toast
 import com.chernikovichandreygmail.R
 import com.chernikovichandreygmail.lesson7.dao.StudentDao
 import com.chernikovichandreygmail.lesson7.domain.Student
-import kotlinx.android.synthetic.main.activity_recycler_view_lesson7.view.*
 
 class SaveStudent : Fragment() {
-    private lateinit var sharedPreferences: SharedPreferences
     private lateinit var save: Button
     private lateinit var photo: EditText
     private lateinit var name: EditText
@@ -24,11 +20,6 @@ class SaveStudent : Fragment() {
     private lateinit var age: EditText
 
     companion object {
-        const val URL_KEY = "URL_KEY"
-        const val NAME_KEY = "NAME_KEY"
-        const val SURNAME_KEY = "SURNAME_KEY"
-        const val AGE_KEY = "AGE_KEY"
-
         fun getInstance(): SaveStudent {
             return SaveStudent()
         }
@@ -48,12 +39,12 @@ class SaveStudent : Fragment() {
         age = view.findViewById(R.id.addAge)
 
         save.setOnClickListener {
-            if(emptyCheck()){
+            if (emptyCheck()) {
                 StudentDao.students.add(Student(
                         photo.text.toString()
-                        ,name.text.toString()
-                        ,surName.text.toString()
-                        ,age.text.toString().toInt()))
+                        , name.text.toString()
+                        , surName.text.toString()
+                        , age.text.toString().toInt()))
                 val transactionFragment = activity!!.supportFragmentManager.beginTransaction()
                 transactionFragment.replace(R.id.fragment_site, RecyclerStudent.getInstance())
                         .addToBackStack(null)
@@ -63,20 +54,21 @@ class SaveStudent : Fragment() {
     }
 
     private fun emptyCheck(): Boolean {
-        if (photo.text.toString() == "") {
-            Toast.makeText(view!!.context, "Загрузите фото", Toast.LENGTH_LONG).show()
-            return false
-        } else if (name.text.toString() == "") {
-            Toast.makeText(view!!.context, "Введите имя", Toast.LENGTH_LONG).show()
-            return false
-        } else if (surName.text.toString() == "") {
-            Toast.makeText(view!!.context, "Введите фамилию", Toast.LENGTH_LONG).show()
-            return false
-        } else if (age.text.toString() == "") {
-            Toast.makeText(view!!.context, "Введите возраст", Toast.LENGTH_LONG).show()
-            return false
-        } else
-            return true
+        return when {
+            name.text.toString() == "" -> {
+                Toast.makeText(view!!.context, "Введите имя", Toast.LENGTH_LONG).show()
+                false
+            }
+            surName.text.toString() == "" -> {
+                Toast.makeText(view!!.context, "Введите фамилию", Toast.LENGTH_LONG).show()
+                false
+            }
+            age.text.toString() == "" -> {
+                Toast.makeText(view!!.context, "Введите возраст", Toast.LENGTH_LONG).show()
+                false
+            }
+            else -> true
+        }
     }
 
 

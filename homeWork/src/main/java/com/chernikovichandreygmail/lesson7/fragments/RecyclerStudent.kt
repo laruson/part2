@@ -1,11 +1,13 @@
 package com.chernikovichandreygmail.lesson7.fragments
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,10 +26,18 @@ class RecyclerStudent : Fragment() {
     private val adapter = StudentListAdapter(StudentDao.students) {
         student = it
         EditStudent.getStudent(student)
-        val transactionFragment = activity!!.supportFragmentManager.beginTransaction()
-        transactionFragment.replace(R.id.fragment_site, EditStudent.getInstance())
-                .addToBackStack(null)
-                .commit()
+        if(this.resources.configuration.orientation== Configuration.ORIENTATION_LANDSCAPE) {
+            val transactionFragment = activity!!.supportFragmentManager.beginTransaction()
+            transactionFragment.hide(RecyclerStudent.getInstance())
+                    .replace(R.id.info_side, EditStudent.getInstance())
+                    .addToBackStack(null)
+                    .commit()
+        }else{
+            val transactionFragment = activity!!.supportFragmentManager.beginTransaction()
+            transactionFragment.replace(R.id.fragment_site, EditStudent.getInstance())
+                    .addToBackStack(null)
+                    .commit()
+        }
     }
 
     companion object {
@@ -62,10 +72,18 @@ class RecyclerStudent : Fragment() {
         recycler.setHasFixedSize(true)
 
         add.setOnClickListener {
-            val transactionFragment = activity!!.supportFragmentManager.beginTransaction()
-            transactionFragment.replace(R.id.fragment_site, SaveStudent.getInstance())
-                    .addToBackStack(null)
-                    .commit()
+            if(this.resources.configuration.orientation== Configuration.ORIENTATION_LANDSCAPE) {
+                val transactionFragment = activity!!.supportFragmentManager.beginTransaction()
+                transactionFragment.replace(R.id.info_side, SaveStudent.getInstance())
+                        .addToBackStack(null)
+                        .commit()
+            }else{
+                val transactionFragment = activity!!.supportFragmentManager.beginTransaction()
+                transactionFragment.replace(R.id.fragment_site, SaveStudent.getInstance())
+                        .addToBackStack(null)
+                        .commit()
+            }
+
         }
 
         search.addTextChangedListener(object : TextWatcher {

@@ -6,12 +6,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <EditText
-        android:layout_marginTop="15dp"
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".5"
         android:inputType="text"
+
         android:textColor="@color/black"
         android:textSize="20sp" />
 

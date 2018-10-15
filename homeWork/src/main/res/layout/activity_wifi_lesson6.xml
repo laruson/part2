@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/marginTop"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/wifi_service"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center" />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:onClick="changeWifi"
+        android:id="@+id/wifi_control"
+        android:text="@string/change"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_weight=".2"
+        android:layout_gravity="center"
+        />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

@@ -40,6 +40,13 @@
         android:text="@string/task5" />
 
     <Button
+        android:id="@+id/task6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="taskSix"
+        android:text="@string/task6" />
+
+    <Button
         android:id="@+id/task7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

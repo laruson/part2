@@ -3,6 +3,7 @@
     package="com.chernikovichandreygmail">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -26,6 +27,8 @@
         <activity android:name=".lesson3.Picture" />
         <activity android:name=".lesson4.Main" />
         <activity android:name=".lesson5.Wifi" />
+        <activity android:name=".lesson6.WifiControl" />
+        <service android:name=".lesson6.ServiceWifi" />
         <activity android:name=".lesson7.LessonSevenActivityMain"
             android:windowSoftInputMode="adjustPan"
             />

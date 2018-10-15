@@ -23,7 +23,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="1.2"
                 android:orientation="vertical">
 
                 <TextView
@@ -99,7 +99,7 @@
         android:layout_height="0dp"
         android:layout_gravity="center"
         android:layout_weight="1.2"
-        android:text="@string/svave" />
+        android:text="@string/save" />
 
     <View
         android:layout_width="wrap_content"

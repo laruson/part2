@@ -8,28 +8,28 @@
 
     <application
 
-        android:name=".ExampleApplication"
+        android:name=".presenter.screen.ExampleApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Menu">
+        <activity android:name=".presenter.screen.Menu">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".lesson1.Swap" />
-        <activity android:name=".lesson2.Flags" />
-        <activity android:name=".lesson3.Picture" />
-        <activity android:name=".lesson4.Main" />
-        <activity android:name=".lesson5.Wifi" />
-        <activity android:name=".lesson6.WifiControl" />
-        <service android:name=".lesson6.ServiceWifi" />
-        <activity android:name=".lesson7.LessonSevenActivityMain"
+        <activity android:name=".presenter.screen.lesson1.Swap" />
+        <activity android:name=".presenter.screen.lesson2.Flags" />
+        <activity android:name=".presenter.screen.lesson3.Picture" />
+        <activity android:name="com.chernikovichandreygmail.presenter.screen.lesson4.Main" />
+        <activity android:name="com.chernikovichandreygmail.presenter.screen.lesson5.Wifi" />
+        <activity android:name="com.chernikovichandreygmail.presenter.screen.lesson6.WifiControl" />
+        <service android:name="com.chernikovichandreygmail.presenter.screen.lesson6.ServiceWifi" />
+        <activity android:name="com.chernikovichandreygmail.presenter.screen.lesson7.LessonSevenActivityMain"
             android:windowSoftInputMode="adjustPan"
             />
  

@@ -10,7 +10,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center" />
 
-    <com.chernikovichandreygmail.lesson5.Watch
+    <com.chernikovichandreygmail.presenter.screen.lesson5.Watch
         android:id="@+id/watch"
         android:layout_marginTop="100dp"
         android:layout_width="wrap_content"

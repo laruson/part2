@@ -1,4 +1,4 @@
-package com.chernikovichandreygmail;
+package com.chernikovichandreygmail.presenter.screen;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-import com.chernikovichandreygmail.lesson1.Swap;
-import com.chernikovichandreygmail.lesson2.Flags;
-import com.chernikovichandreygmail.lesson3.Picture;
-import com.chernikovichandreygmail.lesson4.Main;
-import com.chernikovichandreygmail.lesson5.Wifi;
-import com.chernikovichandreygmail.lesson6.WifiControl;
-import com.chernikovichandreygmail.lesson7.LessonSevenActivityMain;
+import com.chernikovichandreygmail.R;
+import com.chernikovichandreygmail.presenter.screen.lesson1.Swap;
+import com.chernikovichandreygmail.presenter.screen.lesson2.Flags;
+import com.chernikovichandreygmail.presenter.screen.lesson3.Picture;
+import com.chernikovichandreygmail.presenter.screen.lesson4.Main;
+import com.chernikovichandreygmail.presenter.screen.lesson5.Wifi;
+import com.chernikovichandreygmail.presenter.screen.lesson6.WifiControl;
+import com.chernikovichandreygmail.presenter.screen.lesson7.LessonSevenActivityMain;
 
 public class Menu extends Activity {
     private Intent intent;

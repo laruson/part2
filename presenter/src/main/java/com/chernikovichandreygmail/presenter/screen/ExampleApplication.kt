@@ -1,4 +1,4 @@
-package com.chernikovichandreygmail
+package com.chernikovichandreygmail.presenter.screen
 
 import android.app.Application
 import com.squareup.leakcanary.LeakCanary

@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">classWork</string>
-    <string name="username">Username</string>
-    <string name="password">Password</string>
-    <string name="log_in">log in</string>
-    <string name="for_got_your_username_password">For got your username/password?</string>
-    <string name="create_account">create account</string>
-</resources>

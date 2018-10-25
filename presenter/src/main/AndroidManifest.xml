@@ -8,7 +8,7 @@
 
     <application
 
-        android:name=".presenter.screen.ExampleApplication"
+        android:name="com.chernikovichandreygmail.util.ExampleApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -25,14 +25,16 @@
         <activity android:name=".presenter.screen.lesson1.Swap" />
         <activity android:name=".presenter.screen.lesson2.Flags" />
         <activity android:name=".presenter.screen.lesson3.Picture" />
-        <activity android:name="com.chernikovichandreygmail.presenter.screen.lesson4.Main" />
-        <activity android:name="com.chernikovichandreygmail.presenter.screen.lesson5.Wifi" />
-        <activity android:name="com.chernikovichandreygmail.presenter.screen.lesson6.WifiControl" />
-        <service android:name="com.chernikovichandreygmail.presenter.screen.lesson6.ServiceWifi" />
-        <activity android:name="com.chernikovichandreygmail.presenter.screen.lesson7.LessonSevenActivityMain"
+        <activity android:name=".presenter.screen.lesson4.Main" />
+        <activity android:name=".presenter.screen.lesson5.Wifi" />
+        <activity android:name=".presenter.screen.lesson6.WifiControl" />
+        <service android:name=".presenter.screen.lesson6.ServiceWifi" />
+        <activity android:name=".presenter.screen.lesson7.LessonSevenActivityMain"
             android:windowSoftInputMode="adjustPan"
             />
- 
+        <activity android:name=".presenter.screen.lesson9.TimerActivity" />
+        <activity android:name=".presenter.screen.lesson10.InfoActivity" />
+
     </application>
 
 </manifest>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="onClick"
+            type="com.chernikovichandreygmail.util.ButtonClick" />
+
+        <variable
+            name="infoModel"
+            type="com.chernikovichandreygmail.presenter.screen.lesson10.InfoViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@{infoModel.sex ? @color/blue : @color/pink}"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.4"
+            android:src="@{infoModel.sex? infoModel.manImage: infoModel.womanImage}" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@{infoModel.sex? infoModel.manName: infoModel.womanName}"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@{infoModel.sex? infoModel.manSurName: infoModel.womanSurName}"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@{infoModel.sex? Integer.toString(infoModel.manAge): Integer.toString(infoModel.womanAge)}"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@{infoModel.sex ? infoModel.man : infoModel.woman}"
+                android:textColor="@color/black"
+                android:onClick="@{onClick::onClick}"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

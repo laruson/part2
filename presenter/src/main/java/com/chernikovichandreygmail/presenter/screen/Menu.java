@@ -8,12 +8,14 @@ import android.view.View;
 
 import com.chernikovichandreygmail.R;
 import com.chernikovichandreygmail.presenter.screen.lesson1.Swap;
+import com.chernikovichandreygmail.presenter.screen.lesson10.InfoActivity;
 import com.chernikovichandreygmail.presenter.screen.lesson2.Flags;
 import com.chernikovichandreygmail.presenter.screen.lesson3.Picture;
 import com.chernikovichandreygmail.presenter.screen.lesson4.Main;
 import com.chernikovichandreygmail.presenter.screen.lesson5.Wifi;
 import com.chernikovichandreygmail.presenter.screen.lesson6.WifiControl;
 import com.chernikovichandreygmail.presenter.screen.lesson7.LessonSevenActivityMain;
+import com.chernikovichandreygmail.presenter.screen.lesson9.TimerActivity;
 
 public class Menu extends Activity {
     private Intent intent;
@@ -65,4 +67,15 @@ public class Menu extends Activity {
         startActivity(intent);
         finish();
     }
+    public void taskNine(View view) {
+        intent = new Intent(this, TimerActivity.class);
+        startActivity(intent);
+        finish();
+    }
+    public void taskTen(View view) {
+        intent = new Intent(this, InfoActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
+

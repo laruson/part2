@@ -11,11 +11,14 @@
     <color name="white">#ffffff</color>
     <color name="green">#0da70b</color>
     <color name="yellow">#f1d20b</color>
-    <color name="blue">#0634a1</color>
+    <color name="blue">#88a5e9</color>
     <color name="crimson">#a51931</color>
     <color name="dark_blue">#2d2a4a</color>
     <color name="black">#000000</color>
     <color name="gray">#cecece</color>
+    <color name="pink">#f580b3</color>
+
+
 
 
 </resources>

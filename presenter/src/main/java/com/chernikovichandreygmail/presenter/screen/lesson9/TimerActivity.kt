@@ -2,7 +2,6 @@ package com.chernikovichandreygmail.presenter.screen.lesson9
 
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
-import com.android.databinding.library.baseAdapters.BR
 import com.chernikovichandreygmail.R
 import com.chernikovichandreygmail.databinding.ActivityTimerLesson9Binding
 import com.chernikovichandreygmail.presenter.base.BaseMvvmActivity
@@ -27,6 +26,5 @@ class TimerActivity : BaseMvvmActivity<
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.setVariable(BR.timer, viewModel)
     }
 }

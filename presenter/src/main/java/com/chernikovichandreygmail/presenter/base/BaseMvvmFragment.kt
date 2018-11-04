@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.chernikovichandreygmail.BR
 
 abstract class BaseMvvmFragment<
         VM : BaseViewModel<R>,
@@ -16,22 +17,20 @@ abstract class BaseMvvmFragment<
     protected var router: R? = null
 
 
-
     abstract fun provideViewModel(): VM
 
     abstract fun provideLayoutId(): Int
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, provideLayoutId(), container, false)
-
         viewModel = provideViewModel()
-
+        binding.setVariable(BR.viewModel, viewModel)
         return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        if(activity is BaseMvvmActivity<*,*,*>){
+        if (activity is BaseMvvmActivity<*, *, *>) {
             router = (activity as BaseMvvmActivity<*, *, *>).router as R
         }
     }
@@ -45,5 +44,4 @@ abstract class BaseMvvmFragment<
         super.onPause()
         viewModel.removeRouter()
     }
-
 }

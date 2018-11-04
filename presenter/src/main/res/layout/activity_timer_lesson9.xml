@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="timer"
+            name="viewModel"
             type="com.chernikovichandreygmail.presenter.screen.lesson9.TimerViewModel" />
     </data>
 
@@ -20,7 +20,7 @@
             android:textColor="@color/black"
             android:textSize="50sp"
             android:layout_gravity="center_horizontal"
-            android:text="@{timer.times}"/>
+            android:text="@{viewModel.times}"/>
 
     </LinearLayout>
 </layout>

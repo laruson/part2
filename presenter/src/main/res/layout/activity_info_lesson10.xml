@@ -12,7 +12,7 @@
             type="com.chernikovichandreygmail.util.ButtonClick" />
 
         <variable
-            name="infoModel"
+            name="viewModel"
             type="com.chernikovichandreygmail.presenter.screen.lesson10.InfoViewModel" />
     </data>
 
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:background="@{infoModel.sex ? @color/blue : @color/pink}"
+        android:background="@{viewModel.sex ? @color/blue : @color/pink}"
         android:orientation="vertical">
 
 
@@ -29,7 +29,7 @@
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1.4"
-            android:src="@{infoModel.sex? infoModel.manImage: infoModel.womanImage}" />
+            android:src="@{viewModel.sex? viewModel.manImage: viewModel.womanImage}" />
 
 
         <LinearLayout
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@{infoModel.sex? infoModel.manName: infoModel.womanName}"
+                android:text="@{viewModel.sex? viewModel.manName: viewModel.womanName}"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
@@ -50,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@{infoModel.sex? infoModel.manSurName: infoModel.womanSurName}"
+                android:text="@{viewModel.sex? viewModel.manSurName: viewModel.womanSurName}"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
@@ -58,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@{infoModel.sex? Integer.toString(infoModel.manAge): Integer.toString(infoModel.womanAge)}"
+                android:text="@{viewModel.sex? Integer.toString(viewModel.manAge): Integer.toString(viewModel.womanAge)}"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
 
@@ -67,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@{infoModel.sex ? infoModel.man : infoModel.woman}"
+                android:text="@{viewModel.sex ? viewModel.man : viewModel.woman}"
                 android:textColor="@color/black"
                 android:onClick="@{onClick::onClick}"
                 android:textSize="30sp" />

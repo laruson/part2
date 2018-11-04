@@ -64,5 +64,11 @@
         android:layout_height="wrap_content"
         android:onClick="taskTen"
         android:text="@string/task10" />
+    <Button
+        android:id="@+id/task11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="taskEleven"
+        android:text="@string/task11" />
 
 </LinearLayout>

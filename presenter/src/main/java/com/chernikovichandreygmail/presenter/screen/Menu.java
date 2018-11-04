@@ -9,6 +9,7 @@ import android.view.View;
 import com.chernikovichandreygmail.R;
 import com.chernikovichandreygmail.presenter.screen.lesson1.Swap;
 import com.chernikovichandreygmail.presenter.screen.lesson10.InfoActivity;
+import com.chernikovichandreygmail.presenter.screen.lesson11_12.StudentActivity;
 import com.chernikovichandreygmail.presenter.screen.lesson2.Flags;
 import com.chernikovichandreygmail.presenter.screen.lesson3.Picture;
 import com.chernikovichandreygmail.presenter.screen.lesson4.Main;
@@ -74,6 +75,11 @@ public class Menu extends Activity {
     }
     public void taskTen(View view) {
         intent = new Intent(this, InfoActivity.class);
+        startActivity(intent);
+        finish();
+    }
+    public void taskEleven(View view) {
+        intent = new Intent(this, StudentActivity.class);
         startActivity(intent);
         finish();
     }

@@ -2,7 +2,6 @@ package com.chernikovichandreygmail.presenter.screen.lesson10
 
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
-import com.android.databinding.library.baseAdapters.BR
 import com.chernikovichandreygmail.R
 import com.chernikovichandreygmail.databinding.ActivityInfoLesson10Binding
 import com.chernikovichandreygmail.presenter.base.BaseMvvmActivity
@@ -27,7 +26,6 @@ class InfoActivity : BaseMvvmActivity<
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.setVariable(BR.infoModel, viewModel)
         binding.onClick = ButtonClick()
     }
 

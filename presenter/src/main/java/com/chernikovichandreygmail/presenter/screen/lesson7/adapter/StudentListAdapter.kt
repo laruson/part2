@@ -16,7 +16,7 @@ class StudentListAdapter(private var students: ArrayList<Student>, var onItemCli
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(parent.context)
-                .inflate(R.layout.item_student, parent, false)
+                .inflate(R.layout.item_student_old, parent, false)
         return Holder(view)
     }
 

@@ -28,12 +28,17 @@
         <activity android:name=".presenter.screen.lesson4.Main" />
         <activity android:name=".presenter.screen.lesson5.Wifi" />
         <activity android:name=".presenter.screen.lesson6.WifiControl" />
+
         <service android:name=".presenter.screen.lesson6.ServiceWifi" />
-        <activity android:name=".presenter.screen.lesson7.LessonSevenActivityMain"
-            android:windowSoftInputMode="adjustPan"
-            />
+
+        <activity
+            android:name=".presenter.screen.lesson7.LessonSevenActivityMain"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".presenter.screen.lesson9.TimerActivity" />
         <activity android:name=".presenter.screen.lesson10.InfoActivity" />
+        <activity
+            android:name=".presenter.screen.lesson11_12.StudentActivity"
+            android:windowSoftInputMode="adjustPan" />
 
     </application>
 

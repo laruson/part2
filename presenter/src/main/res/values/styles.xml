@@ -43,4 +43,17 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="studentEditText">
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="itemText">
+        <item name="android:gravity">left</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
 </resources>

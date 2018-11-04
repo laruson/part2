@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.chernikovichandreygmail.presenter.screen.lesson11_12.details.StudentDetailsViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="100"
+                app:visibility="@{!viewModel.isProgressEnabled}">
+
+                <EditText
+                    style="@style/studentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="15"
+                    android:text="@={viewModel.imageStudent}"
+                    android:textSize="20sp"
+                    app:visibility="@{viewModel.cursorVisibility}" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="50"
+                    android:onClick="@{viewModel::clickEdit}"
+                    android:src="@{viewModel.imageStudent}" />
+
+                <EditText
+                    style="@style/studentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:cursorVisible="@{viewModel.cursorVisibility}"
+                    android:hint="@string/name"
+                    android:inputType="text"
+                    android:onClick="@{viewModel::clickEdit}"
+                    android:text="@={viewModel.nameStudent}" />
+
+                <EditText
+                    style="@style/studentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:cursorVisible="@{viewModel.cursorVisibility}"
+                    android:hint="@string/age"
+                    android:inputType="number"
+                    android:onClick="@{viewModel::clickEdit}"
+                    android:text="@={viewModel.ageStudent}" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:onClick="@{viewModel.isNewStudent?viewModel::saveStudent:viewModel::updateStudent}"
+                    android:text="@string/save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:visibility="@{viewModel.cursorVisibility}" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:visibility="@{viewModel.isProgressEnabled}" />
+
+    </FrameLayout>
+
+
+</layout>

@@ -3,7 +3,7 @@ package com.chernikovichandreygmail.presenter.base
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.os.Bundle
-import com.android.databinding.library.baseAdapters.BR
+import com.chernikovichandreygmail.BR
 
 abstract class BaseMvvmActivity<
         VM : BaseViewModel<R>,
@@ -11,8 +11,7 @@ abstract class BaseMvvmActivity<
         B : ViewDataBinding> : BaseActivity() {
     protected lateinit var viewModel: VM
     protected lateinit var binding: B
-    public lateinit var router: R
-
+    lateinit var router: R
 
     abstract fun provideViewModel(): VM
 
@@ -20,16 +19,14 @@ abstract class BaseMvvmActivity<
 
     abstract fun provideLayoutId(): Int
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = provideViewModel()
         binding = DataBindingUtil.setContentView(this, provideLayoutId())
-
+        binding.setVariable(BR.viewModel, viewModel)
 
         router = provideRouter()
     }
-
     override fun onResume() {
         super.onResume()
         viewModel.addRouter(router)

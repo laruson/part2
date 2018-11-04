@@ -1,14 +1,9 @@
 package com.chernikovichandreygmail.presenter.screen.lesson10
 
-import android.databinding.BindingAdapter
 import android.databinding.ObservableBoolean
 import android.databinding.ObservableField
 import android.databinding.ObservableInt
-import android.view.View
-import android.widget.ImageView
 import com.chernikovichandreygmail.presenter.base.BaseViewModel
-import com.chernikovichandreygmail.presenter.screen.lesson3.CircularTransformation
-import com.squareup.picasso.Picasso
 
 
 class InfoViewModel : BaseViewModel<InfoRouter>() {
@@ -28,20 +23,6 @@ class InfoViewModel : BaseViewModel<InfoRouter>() {
 
     companion object {
         var staticSex = ObservableBoolean(true)
-        @JvmStatic
-        @BindingAdapter("android:src")
-        fun loadImage(imageView: ImageView, url: String) {
-            Picasso.get()
-                    .load(url)
-                    .transform(CircularTransformation())
-                    .into(imageView)
-        }
-
-        @JvmStatic
-        @BindingAdapter("android:onClick")
-        fun click(view: View, clickListener: View.OnClickListener) {
-            view.setOnClickListener(clickListener)
-        }
     }
 
 

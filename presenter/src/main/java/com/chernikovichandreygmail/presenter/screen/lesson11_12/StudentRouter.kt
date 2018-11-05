@@ -9,20 +9,23 @@ import com.chernikovichandreygmail.presenter.screen.lesson11_12.list.StudentList
 class StudentRouter(activity: StudentActivity) : BaseRouter<StudentActivity>(activity) {
 
     fun showList() {
+        
         replaceFragment(StudentListFragment.getInstance(),
                 activity.supportFragmentManager,
                 StudentListFragment.getInstance(),
                 R.id.container, false)
+
+
     }
 
-    fun showDetails(id:String){
-        val view= activity.findViewById<View>(R.id.container_details)
-        if(view==null){
+    fun showDetails(id: String) {
+        val view = activity.findViewById<View>(R.id.container_details)
+        if (view == null) {
             replaceFragment(StudentListFragment.getInstance(),
                     activity.supportFragmentManager,
                     StudentDetailsFragment.getInstance(id),
                     R.id.container, true)
-        }else{
+        } else {
             replaceFragment(StudentListFragment.getInstance(),
                     activity.supportFragmentManager,
                     StudentDetailsFragment.getInstance(id),
@@ -30,14 +33,14 @@ class StudentRouter(activity: StudentActivity) : BaseRouter<StudentActivity>(act
         }
     }
 
-    fun showDetails(){
-        val view= activity.findViewById<View>(R.id.container_details)
-        if(view==null){
+    fun showDetails() {
+        val view = activity.findViewById<View>(R.id.container_details)
+        if (view == null) {
             replaceFragment(StudentListFragment.getInstance(),
                     activity.supportFragmentManager,
                     StudentDetailsFragment.getInstance(),
                     R.id.container, true)
-        }else{
+        } else {
             replaceFragment(StudentListFragment.getInstance(),
                     activity.supportFragmentManager,
                     StudentDetailsFragment.getInstance(),

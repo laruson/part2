@@ -36,9 +36,7 @@
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".presenter.screen.lesson9.TimerActivity" />
         <activity android:name=".presenter.screen.lesson10.InfoActivity" />
-        <activity
-            android:name=".presenter.screen.lesson11_12.StudentActivity"
-            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".presenter.screen.lesson11_12.StudentActivity"/>
 
     </application>
 
